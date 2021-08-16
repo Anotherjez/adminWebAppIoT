@@ -1,0 +1,234 @@
+current directory: /home/anotherjez/Documentos/Dev/Rails/adminiotpg/vendor/bundle/ruby/3.0.0/gems/rbtree-0.4.4
+/usr/bin/ruby -I /usr/share/rubygems -r ./siteconf20210816-33736-7kqkaj.rb extconf.rb
+checking for rb_exec_recursive() in ruby.h... yes
+checking for rb_exec_recursive_paired() in ruby.h... yes
+checking for rb_proc_lambda_p() in ruby.h... yes
+checking for rb_ary_resize() in ruby.h... yes
+checking for rb_obj_hide() in ruby.h... yes
+checking for rb_safe_level() in ruby.h... no
+creating Makefile
+
+current directory: /home/anotherjez/Documentos/Dev/Rails/adminiotpg/vendor/bundle/ruby/3.0.0/gems/rbtree-0.4.4
+make DESTDIR\= clean
+rm -f 
+rm -f rbtree.so  *.o  *.bak mkmf.log .*.time
+
+current directory: /home/anotherjez/Documentos/Dev/Rails/adminiotpg/vendor/bundle/ruby/3.0.0/gems/rbtree-0.4.4
+make DESTDIR\=
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -DNDEBUG -DHAVE_RB_EXEC_RECURSIVE -DHAVE_RB_EXEC_RECURSIVE_PAIRED -DHAVE_RB_PROC_LAMBDA_P -DHAVE_RB_ARY_RESIZE -DHAVE_RB_OBJ_HIDE -DHAVE_HASH_FLATTEN    -fPIC -O2  -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -fPIC -m64 -o dict.o -c dict.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -DNDEBUG -DHAVE_RB_EXEC_RECURSIVE -DHAVE_RB_EXEC_RECURSIVE_PAIRED -DHAVE_RB_PROC_LAMBDA_P -DHAVE_RB_ARY_RESIZE -DHAVE_RB_OBJ_HIDE -DHAVE_HASH_FLATTEN    -fPIC -O2  -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -fPIC -m64 -o rbtree.o -c rbtree.c
+En el fichero incluido desde /usr/include/ruby/internal/assume.h:29,
+                 desde /usr/include/ruby/backward/2/assume.h:24,
+                 desde /usr/include/ruby/defines.h:72,
+                 desde /usr/include/ruby/ruby.h:23,
+                 desde /usr/include/ruby.h:38,
+                 desde rbtree.c:5:
+rbtree.c: En la función ‘rbtree_cmp’:
+rbtree.c:137:14: aviso: el paso del argumento 1 de ‘rb_type’ crea un entero desde un puntero sin una conversión [-Wint-conversion]
+  137 |     if (TYPE(key1) == T_STRING && TYPE(key2) == T_STRING)
+      |              ^~~~
+      |              |
+      |              const void *
+En el fichero incluido desde /usr/include/ruby/internal/fl_type.h:35,
+                 desde /usr/include/ruby/internal/core/rstring.h:30,
+                 desde /usr/include/ruby/internal/arithmetic/char.h:29,
+                 desde /usr/include/ruby/internal/arithmetic.h:23,
+                 desde /usr/include/ruby/ruby.h:25,
+                 desde /usr/include/ruby.h:38,
+                 desde rbtree.c:5:
+/usr/include/ruby/internal/value_type.h:178:15: nota: se esperaba ‘VALUE’ {también conocido como ‘long unsigned int’} pero el argumento es de tipo ‘const void *’
+  178 | rb_type(VALUE obj)
+      |         ~~~~~~^~~
+En el fichero incluido desde /usr/include/ruby/internal/assume.h:29,
+                 desde /usr/include/ruby/backward/2/assume.h:24,
+                 desde /usr/include/ruby/defines.h:72,
+                 desde /usr/include/ruby/ruby.h:23,
+                 desde /usr/include/ruby.h:38,
+                 desde rbtree.c:5:
+rbtree.c:137:40: aviso: el paso del argumento 1 de ‘rb_type’ crea un entero desde un puntero sin una conversión [-Wint-conversion]
+  137 |     if (TYPE(key1) == T_STRING && TYPE(key2) == T_STRING)
+      |                                        ^~~~
+      |                                        |
+      |                                        const void *
+En el fichero incluido desde /usr/include/ruby/internal/fl_type.h:35,
+                 desde /usr/include/ruby/internal/core/rstring.h:30,
+                 desde /usr/include/ruby/internal/arithmetic/char.h:29,
+                 desde /usr/include/ruby/internal/arithmetic.h:23,
+                 desde /usr/include/ruby/ruby.h:25,
+                 desde /usr/include/ruby.h:38,
+                 desde rbtree.c:5:
+/usr/include/ruby/internal/value_type.h:178:15: nota: se esperaba ‘VALUE’ {también conocido como ‘long unsigned int’} pero el argumento es de tipo ‘const void *’
+  178 | rb_type(VALUE obj)
+      |         ~~~~~~^~~
+rbtree.c: En la función ‘rbtree_user_cmp’:
+rbtree.c:168:24: aviso: se pasa el argumento 1 de ‘rb_ensure’ desde un tipo de puntero incompatible [-Wincompatible-pointer-types]
+  168 |     result = rb_ensure(rbtree_user_cmp_body, (VALUE)&args,
+      |                        ^~~~~~~~~~~~~~~~~~~~
+      |                        |
+      |                        VALUE (*)(VALUE *) {también conocido como long unsigned int (*)(long unsigned int *)}
+En el fichero incluido desde /usr/include/ruby/ruby.h:38,
+                 desde /usr/include/ruby.h:38,
+                 desde rbtree.c:5:
+/usr/include/ruby/internal/iterator.h:53:17: nota: se esperaba ‘VALUE (*)(VALUE)’ {también conocido como ‘long unsigned int (*)(long unsigned int)’} pero el argumento es de tipo ‘VALUE (*)(VALUE *)’ {también conocido como ‘long unsigned int (*)(long unsigned int *)’}
+   53 | VALUE rb_ensure(VALUE(*)(VALUE),VALUE,VALUE(*)(VALUE),VALUE);
+      |                 ^~~~~~~~~~~~~~~
+rbtree.c:169:24: aviso: se pasa el argumento 3 de ‘rb_ensure’ desde un tipo de puntero incompatible [-Wincompatible-pointer-types]
+  169 |                        rbtree_user_cmp_ensure, (VALUE)rbtree);
+      |                        ^~~~~~~~~~~~~~~~~~~~~~
+      |                        |
+      |                        VALUE (*)(rbtree_t *) {también conocido como long unsigned int (*)(rbtree_t *)}
+En el fichero incluido desde /usr/include/ruby/ruby.h:38,
+                 desde /usr/include/ruby.h:38,
+                 desde rbtree.c:5:
+/usr/include/ruby/internal/iterator.h:53:39: nota: se esperaba ‘VALUE (*)(VALUE)’ {también conocido como ‘long unsigned int (*)(long unsigned int)’} pero el argumento es de tipo ‘VALUE (*)(rbtree_t *)’ {también conocido como ‘long unsigned int (*)(rbtree_t *)’}
+   53 | VALUE rb_ensure(VALUE(*)(VALUE),VALUE,VALUE(*)(VALUE),VALUE);
+      |                                       ^~~~~~~~~~~~~~~
+rbtree.c: En la función ‘rbtree_insert’:
+rbtree.c:376:15: aviso: se pasa el argumento 1 de ‘rb_ensure’ desde un tipo de puntero incompatible [-Wincompatible-pointer-types]
+  376 |     rb_ensure(insert_node_body, (VALUE)&arg,
+      |               ^~~~~~~~~~~~~~~~
+      |               |
+      |               VALUE (*)(rbtree_insert_arg_t *) {también conocido como long unsigned int (*)(rbtree_insert_arg_t *)}
+En el fichero incluido desde /usr/include/ruby/ruby.h:38,
+                 desde /usr/include/ruby.h:38,
+                 desde rbtree.c:5:
+/usr/include/ruby/internal/iterator.h:53:17: nota: se esperaba ‘VALUE (*)(VALUE)’ {también conocido como ‘long unsigned int (*)(long unsigned int)’} pero el argumento es de tipo ‘VALUE (*)(rbtree_insert_arg_t *)’ {también conocido como ‘long unsigned int (*)(rbtree_insert_arg_t *)’}
+   53 | VALUE rb_ensure(VALUE(*)(VALUE),VALUE,VALUE(*)(VALUE),VALUE);
+      |                 ^~~~~~~~~~~~~~~
+rbtree.c:377:15: aviso: se pasa el argumento 3 de ‘rb_ensure’ desde un tipo de puntero incompatible [-Wincompatible-pointer-types]
+  377 |               insert_node_ensure, (VALUE)&arg);
+      |               ^~~~~~~~~~~~~~~~~~
+      |               |
+      |               VALUE (*)(rbtree_insert_arg_t *) {también conocido como long unsigned int (*)(rbtree_insert_arg_t *)}
+En el fichero incluido desde /usr/include/ruby/ruby.h:38,
+                 desde /usr/include/ruby.h:38,
+                 desde rbtree.c:5:
+/usr/include/ruby/internal/iterator.h:53:39: nota: se esperaba ‘VALUE (*)(VALUE)’ {también conocido como ‘long unsigned int (*)(long unsigned int)’} pero el argumento es de tipo ‘VALUE (*)(rbtree_insert_arg_t *)’ {también conocido como ‘long unsigned int (*)(rbtree_insert_arg_t *)’}
+   53 | VALUE rb_ensure(VALUE(*)(VALUE),VALUE,VALUE(*)(VALUE),VALUE);
+      |                                       ^~~~~~~~~~~~~~~
+rbtree.c: En la función ‘rbtree_for_each’:
+rbtree.c:632:22: aviso: se pasa el argumento 1 de ‘rb_ensure’ desde un tipo de puntero incompatible [-Wincompatible-pointer-types]
+  632 |     return rb_ensure(rbtree_each_body, (VALUE)&each_arg,
+      |                      ^~~~~~~~~~~~~~~~
+      |                      |
+      |                      VALUE (*)(rbtree_each_arg_t *) {también conocido como long unsigned int (*)(rbtree_each_arg_t *)}
+En el fichero incluido desde /usr/include/ruby/ruby.h:38,
+                 desde /usr/include/ruby.h:38,
+                 desde rbtree.c:5:
+/usr/include/ruby/internal/iterator.h:53:17: nota: se esperaba ‘VALUE (*)(VALUE)’ {también conocido como ‘long unsigned int (*)(long unsigned int)’} pero el argumento es de tipo ‘VALUE (*)(rbtree_each_arg_t *)’ {también conocido como ‘long unsigned int (*)(rbtree_each_arg_t *)’}
+   53 | VALUE rb_ensure(VALUE(*)(VALUE),VALUE,VALUE(*)(VALUE),VALUE);
+      |                 ^~~~~~~~~~~~~~~
+rbtree.c: En la función ‘rbtree_reverse_for_each’:
+rbtree.c:644:22: aviso: se pasa el argumento 1 de ‘rb_ensure’ desde un tipo de puntero incompatible [-Wincompatible-pointer-types]
+  644 |     return rb_ensure(rbtree_each_body, (VALUE)&each_arg,
+      |                      ^~~~~~~~~~~~~~~~
+      |                      |
+      |                      VALUE (*)(rbtree_each_arg_t *) {también conocido como long unsigned int (*)(rbtree_each_arg_t *)}
+En el fichero incluido desde /usr/include/ruby/ruby.h:38,
+                 desde /usr/include/ruby.h:38,
+                 desde rbtree.c:5:
+/usr/include/ruby/internal/iterator.h:53:17: nota: se esperaba ‘VALUE (*)(VALUE)’ {también conocido como ‘long unsigned int (*)(long unsigned int)’} pero el argumento es de tipo ‘VALUE (*)(rbtree_each_arg_t *)’ {también conocido como ‘long unsigned int (*)(rbtree_each_arg_t *)’}
+   53 | VALUE rb_ensure(VALUE(*)(VALUE),VALUE,VALUE(*)(VALUE),VALUE);
+      |                 ^~~~~~~~~~~~~~~
+rbtree.c: En la función ‘rbtree_remove_if’:
+rbtree.c:948:22: aviso: se pasa el argumento 1 de ‘rb_ensure’ desde un tipo de puntero incompatible [-Wincompatible-pointer-types]
+  948 |     return rb_ensure(rbtree_remove_if_body, (VALUE)&arg,
+      |                      ^~~~~~~~~~~~~~~~~~~~~
+      |                      |
+      |                      VALUE (*)(rbtree_remove_if_arg_t *) {también conocido como long unsigned int (*)(rbtree_remove_if_arg_t *)}
+En el fichero incluido desde /usr/include/ruby/ruby.h:38,
+                 desde /usr/include/ruby.h:38,
+                 desde rbtree.c:5:
+/usr/include/ruby/internal/iterator.h:53:17: nota: se esperaba ‘VALUE (*)(VALUE)’ {también conocido como ‘long unsigned int (*)(long unsigned int)’} pero el argumento es de tipo ‘VALUE (*)(rbtree_remove_if_arg_t *)’ {también conocido como ‘long unsigned int (*)(rbtree_remove_if_arg_t *)’}
+   53 | VALUE rb_ensure(VALUE(*)(VALUE),VALUE,VALUE(*)(VALUE),VALUE);
+      |                 ^~~~~~~~~~~~~~~
+rbtree.c:949:22: aviso: se pasa el argumento 3 de ‘rb_ensure’ desde un tipo de puntero incompatible [-Wincompatible-pointer-types]
+  949 |                      rbtree_remove_if_ensure, (VALUE)&arg);
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~
+      |                      |
+      |                      VALUE (*)(rbtree_remove_if_arg_t *) {también conocido como long unsigned int (*)(rbtree_remove_if_arg_t *)}
+En el fichero incluido desde /usr/include/ruby/ruby.h:38,
+                 desde /usr/include/ruby.h:38,
+                 desde rbtree.c:5:
+/usr/include/ruby/internal/iterator.h:53:39: nota: se esperaba ‘VALUE (*)(VALUE)’ {también conocido como ‘long unsigned int (*)(long unsigned int)’} pero el argumento es de tipo ‘VALUE (*)(rbtree_remove_if_arg_t *)’ {también conocido como ‘long unsigned int (*)(rbtree_remove_if_arg_t *)’}
+   53 | VALUE rb_ensure(VALUE(*)(VALUE),VALUE,VALUE(*)(VALUE),VALUE);
+      |                                       ^~~~~~~~~~~~~~~
+rbtree.c: En la función ‘rbtree_bound’:
+rbtree.c:1569:26: aviso: se pasa el argumento 1 de ‘rb_ensure’ desde un tipo de puntero incompatible [-Wincompatible-pointer-types]
+ 1569 |         return rb_ensure(rbtree_bound_body, (VALUE)&arg,
+      |                          ^~~~~~~~~~~~~~~~~
+      |                          |
+      |                          VALUE (*)(rbtree_bound_arg_t *) {también conocido como long unsigned int (*)(rbtree_bound_arg_t *)}
+En el fichero incluido desde /usr/include/ruby/ruby.h:38,
+                 desde /usr/include/ruby.h:38,
+                 desde rbtree.c:5:
+/usr/include/ruby/internal/iterator.h:53:17: nota: se esperaba ‘VALUE (*)(VALUE)’ {también conocido como ‘long unsigned int (*)(long unsigned int)’} pero el argumento es de tipo ‘VALUE (*)(rbtree_bound_arg_t *)’ {también conocido como ‘long unsigned int (*)(rbtree_bound_arg_t *)’}
+   53 | VALUE rb_ensure(VALUE(*)(VALUE),VALUE,VALUE(*)(VALUE),VALUE);
+      |                 ^~~~~~~~~~~~~~~
+rbtree.c: En la función ‘pp_pair’:
+rbtree.c:1736:53: aviso: se pasa el argumento 3 de ‘rb_iterate’ desde un tipo de puntero incompatible [-Wincompatible-pointer-types]
+ 1736 |     return rb_iterate(pp_group, (VALUE)&group_args, pp_value, (VALUE)pair_arg);
+      |                                                     ^~~~~~~~
+      |                                                     |
+      |                                                     VALUE (*)(VALUE,  pp_pair_arg_t *) {también conocido como long unsigned int (*)(long unsigned int,  pp_pair_arg_t *)}
+En el fichero incluido desde /usr/include/ruby/ruby.h:38,
+                 desde /usr/include/ruby.h:38,
+                 desde rbtree.c:5:
+/usr/include/ruby/internal/iterator.h:47:40: nota: se esperaba ‘rb_block_call_func_t’ {también conocido como ‘long unsigned int (*)(long unsigned int,  long unsigned int,  int,  const long unsigned int *, long unsigned int)’} pero el argumento es de tipo ‘VALUE (*)(VALUE,  pp_pair_arg_t *)’ {también conocido como ‘long unsigned int (*)(long unsigned int,  pp_pair_arg_t *)’}
+   47 | VALUE rb_iterate(VALUE(*)(VALUE),VALUE,rb_block_call_func_t,VALUE);
+      |                                        ^~~~~~~~~~~~~~~~~~~~
+rbtree.c: En la función ‘pp_each_pair_i’:
+rbtree.c:1765:46: aviso: se pasa el argumento 3 de ‘rb_iterate’ desde un tipo de puntero incompatible [-Wincompatible-pointer-types]
+ 1765 |     rb_iterate(pp_group, (VALUE)&group_args, pp_pair, (VALUE)&pair_arg);
+      |                                              ^~~~~~~
+      |                                              |
+      |                                              VALUE (*)(VALUE,  pp_pair_arg_t *) {también conocido como long unsigned int (*)(long unsigned int,  pp_pair_arg_t *)}
+En el fichero incluido desde /usr/include/ruby/ruby.h:38,
+                 desde /usr/include/ruby.h:38,
+                 desde rbtree.c:5:
+/usr/include/ruby/internal/iterator.h:47:40: nota: se esperaba ‘rb_block_call_func_t’ {también conocido como ‘long unsigned int (*)(long unsigned int,  long unsigned int,  int,  const long unsigned int *, long unsigned int)’} pero el argumento es de tipo ‘VALUE (*)(VALUE,  pp_pair_arg_t *)’ {también conocido como ‘long unsigned int (*)(long unsigned int,  pp_pair_arg_t *)’}
+   47 | VALUE rb_iterate(VALUE(*)(VALUE),VALUE,rb_block_call_func_t,VALUE);
+      |                                        ^~~~~~~~~~~~~~~~~~~~
+rbtree.c: En la función ‘pp_rbtree’:
+rbtree.c:1796:46: aviso: se pasa el argumento 3 de ‘rb_iterate’ desde un tipo de puntero incompatible [-Wincompatible-pointer-types]
+ 1796 |     rb_iterate(pp_group, (VALUE)&group_args, pp_each_pair, (VALUE)rbtree_arg);
+      |                                              ^~~~~~~~~~~~
+      |                                              |
+      |                                              VALUE (*)(VALUE,  pp_rbtree_arg_t *) {también conocido como long unsigned int (*)(long unsigned int,  pp_rbtree_arg_t *)}
+En el fichero incluido desde /usr/include/ruby/ruby.h:38,
+                 desde /usr/include/ruby.h:38,
+                 desde rbtree.c:5:
+/usr/include/ruby/internal/iterator.h:47:40: nota: se esperaba ‘rb_block_call_func_t’ {también conocido como ‘long unsigned int (*)(long unsigned int,  long unsigned int,  int,  const long unsigned int *, long unsigned int)’} pero el argumento es de tipo ‘VALUE (*)(VALUE,  pp_rbtree_arg_t *)’ {también conocido como ‘long unsigned int (*)(long unsigned int,  pp_rbtree_arg_t *)’}
+   47 | VALUE rb_iterate(VALUE(*)(VALUE),VALUE,rb_block_call_func_t,VALUE);
+      |                                        ^~~~~~~~~~~~~~~~~~~~
+rbtree.c: En la función ‘rbtree_pretty_print’:
+rbtree.c:1823:53: aviso: se pasa el argumento 3 de ‘rb_iterate’ desde un tipo de puntero incompatible [-Wincompatible-pointer-types]
+ 1823 |     return rb_iterate(pp_rbtree_group, (VALUE)&arg, pp_rbtree, (VALUE)&arg);
+      |                                                     ^~~~~~~~~
+      |                                                     |
+      |                                                     VALUE (*)(VALUE,  pp_rbtree_arg_t *) {también conocido como long unsigned int (*)(long unsigned int,  pp_rbtree_arg_t *)}
+En el fichero incluido desde /usr/include/ruby/ruby.h:38,
+                 desde /usr/include/ruby.h:38,
+                 desde rbtree.c:5:
+/usr/include/ruby/internal/iterator.h:47:40: nota: se esperaba ‘rb_block_call_func_t’ {también conocido como ‘long unsigned int (*)(long unsigned int,  long unsigned int,  int,  const long unsigned int *, long unsigned int)’} pero el argumento es de tipo ‘VALUE (*)(VALUE,  pp_rbtree_arg_t *)’ {también conocido como ‘long unsigned int (*)(long unsigned int,  pp_rbtree_arg_t *)’}
+   47 | VALUE rb_iterate(VALUE(*)(VALUE),VALUE,rb_block_call_func_t,VALUE);
+      |                                        ^~~~~~~~~~~~~~~~~~~~
+rbtree.c: En la función ‘Init_rbtree’:
+rbtree.c:1900:5: aviso: ‘rb_cData’ es obsoleto: by: rb_cObject.  Will be removed in 3.1. [-Wdeprecated-declarations]
+ 1900 |     MultiRBTree = rb_define_class("MultiRBTree", rb_cData);
+      |     ^~~~~~~~~~~
+En el fichero incluido desde /usr/include/ruby/internal/core.h:27,
+                 desde /usr/include/ruby/ruby.h:26,
+                 desde /usr/include/ruby.h:38,
+                 desde rbtree.c:5:
+/usr/include/ruby/internal/core/rdata.h:169:1: nota: se declara aquí
+  169 | rb_cData(void)
+      | ^~~~~~~~
+rm -f rbtree.so
+gcc -shared -o rbtree.so dict.o rbtree.o -L. -L/usr/lib64 -L. -Wl,-z,relro -Wl,--as-needed  -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,-z,relro -Wl,--as-needed  -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld   -m64  -lruby  -lm   -lc
+
+current directory: /home/anotherjez/Documentos/Dev/Rails/adminiotpg/vendor/bundle/ruby/3.0.0/gems/rbtree-0.4.4
+make DESTDIR\= install
+/usr/bin/mkdir -p . ./.gem.20210816-33736-n0gc3d
+exit > .sitearchdir.time
+/usr/bin/install -c -m 0755 rbtree.so ./.gem.20210816-33736-n0gc3d
