@@ -1,0 +1,31 @@
+<div class="row mx-md-n5">
+  <div class="col px-md-5">
+    <h2>Historial</h2>
+  </div>
+</div>
+
+<div class="row mx-md-n5">
+  <div class="col px-md-5">
+    <h3>Cantidad de pasos realizados <span class="badge bg-primary"><%= @steps %></span></h3>
+  </div>
+  <div class="col px-md-5">
+    <h3>Cantidad de metros cruzados <span class="badge bg-primary"><%= @meters %></span></h3>
+  </div>
+</div>
+
+<table class="table" style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+  <thead>
+    <tr>
+      <th scope="col">Ubicacion</th>
+      <th scope="col">Fecha</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @records.each do |rec| %>
+    <tr>
+      <td><%= rec.location %></td>
+      <td><%= rec.date.strftime('%A %b %Y, %H:%M %p') %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
