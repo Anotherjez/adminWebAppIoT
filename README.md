@@ -1,4 +1,4 @@
-# README
+# Admin Web App
 
 Este proyecto forma parte del proyecto final de IoT - ITLA C2-2021. Consiste en un Web App para el administrador, que mostrará el historial de cruces peatonales registrados en la base de datos, con cada cruce peatonal que realiza un usuario a través de la [App Móvil](https://github.com/Anotherjez/TrafficLightsApp) esta Web App recibirá un mensaje a través del broker mqtt con la ubicación del cruce peatonal que se registrará en la base de datos.
 
